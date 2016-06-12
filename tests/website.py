@@ -36,7 +36,7 @@ class WebsiteTests(unittest.TestCase):
             with open(os.path.join(dir_name, file_name), "r") as handler:
                 return json.load(handler)
         except IOError:
-            raise unittest.skipTest(
+            raise unittest.SkipTest(
                 "For all tests implying a real connection to the Project Euler "
                 "website, please create a file named {} in {} which is a json "
                 "file containing something like : "
